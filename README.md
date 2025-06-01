@@ -1,15 +1,15 @@
-# 🌦️ Weather Data API
+# Weather Data API
 
 A Flask-based REST API for accessing historical weather station data. Provides temperature records by station, date, and year.
 
-## Features ✨
+## Features
 
 - **Multiple Endpoints**: Query by date, station, or year
 - **JSON Responses**: Easy-to-consume data format
 - **Station Catalog**: Browse available weather stations
 - **Simple Integration**: RESTful interface
 
-## API Endpoints 📡
+## API Endpoints
 
 | Endpoint | Description | Example |
 |----------|-------------|---------|
@@ -18,7 +18,7 @@ A Flask-based REST API for accessing historical weather station data. Provides t
 | `/api/v1/<station>` | All data for a station | [/api/v1/10](http://127.0.0.1:5000/api/v1/10) |
 | `/api/v1/yearly/<station>/<year>` | All data for station/year | [/api/v1/yearly/10/1988](http://127.0.0.1:5000/api/v1/yearly/10/1988) |
 
-## Installation 🛠️
+## Installation
 
 1. Clone repository:
    ```
@@ -32,12 +32,12 @@ A Flask-based REST API for accessing historical weather station data. Provides t
     ```
    run app.py
    ```
-## Data Structure 📂
+## Data Structure
     data_small/
     ├── stations.txt          # Station metadata
     └── TG_STAIDxxxxxx.txt    # Temperature data files (one per station)
 
-## Example Response 🌡️
+## Example Response
 ```text
     {
       "station": "10",
@@ -45,10 +45,10 @@ A Flask-based REST API for accessing historical weather station data. Provides t
       "temperature": 11.2
     }
 ```
-## Development 🧑‍💻
+## Development
 - Built with Flask and Pandas
 - Data files should be placed in data_small/
 - Station IDs must be 6-digit padded (e.g., 10 → 000010)
 
-## License 📄
+## License 
 - MIT License - Free for personal and commercial use
